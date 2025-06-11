@@ -49,13 +49,17 @@ void Program::execute(const std::string &project_name)
 
     readme_file_content << "# " << project_name
                         << "\n\n"
-                        << "## prerequisites:\n"
+                        << "## prerequisites\n"
                         << "->python3<br>\n"
                         << "->git<br>\n"
                         << "->make<br>\n"
                         << "->cmake 3.20 or higher\n\n"
-                        << "## build:\n"
-                        << "execute the build.py script to build an run.\n";
+                        << "## build\n"
+                        << "execute the build.py script:<br>\n"
+                        << "\t(On Windows)<br>\n"
+                        << "\t\t-> 'python build.py'<br>\n\n"
+                        << "\tunix-like systems like (macOS, Linux, ...)<br>\n"
+                        << "\t\t-> 'python3 build.py'<br>\n";
 
     dot_gitignore_content << "build/\n"
                           << ".vscode\n";
