@@ -56,9 +56,9 @@ void Program::execute(const std::string &project_name)
                         << "->cmake 3.20 or higher\n\n"
                         << "## build\n"
                         << "execute the build.py script:<br>\n"
-                        << "\t(On Windows)<br>\n"
-                        << "\t\t-> 'python build.py'<br>\n\n"
-                        << "\tunix-like systems like (macOS, Linux, ...)<br>\n"
+                        << "\tOn Windows:<br>\n"
+                        << "\t\t-> 'python build.py'<br><br>\n\n"
+                        << "\tOn unix-like systems like (macOS, Linux, ...):<br>\n"
                         << "\t\t-> 'python3 build.py'<br>\n";
 
     dot_gitignore_content << "build/\n"

@@ -1,1 +1,1 @@
-/usr/bin/c++ CMakeFiles/cxx_init.dir/src/file.cpp.o CMakeFiles/cxx_init.dir/src/helpers.cpp.o CMakeFiles/cxx_init.dir/src/main.cpp.o CMakeFiles/cxx_init.dir/src/program.cpp.o -o cxx_init 
+/usr/bin/g++-11 CMakeFiles/cxx_init.dir/src/file.cpp.o CMakeFiles/cxx_init.dir/src/helpers.cpp.o CMakeFiles/cxx_init.dir/src/main.cpp.o CMakeFiles/cxx_init.dir/src/program.cpp.o -o cxx_init 
