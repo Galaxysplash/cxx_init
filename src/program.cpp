@@ -55,13 +55,11 @@ void Program::execute(const std::string &project_name)
                         << "->make<br>\n"
                         << "->cmake 3.20 or higher\n\n"
                         << "## build\n"
-                        << "execute the build.py script:<br>\n"
-                        << "\tOn Windows:<br>\n"
-                        << "\t\t-> 'python build.py'<br><br>\n\n"
-                        << "\tOn unix-like systems like (macOS, Linux, ...):<br>\n"
-                        << "\t\t-> 'python3 build.py'<br>\n";
+                        << "-> On Windows: 'python build.py'<br>\n"
+                        << "-> On unix-like systems like (macOS, Linux, freeBSD, ...): "
+                        << "'python3 build.py'<br>\n";
 
-    dot_gitignore_content << "build/\n"
+    dot_gitignore_content << "build\n"
                           << ".vscode\n";
 
     File global_files[] = {
