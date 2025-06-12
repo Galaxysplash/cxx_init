@@ -9,8 +9,5 @@ a small free and open source tool made for speeding up the process of creating a
 
 ## build
 execute the build.py script:<br>
-	On Windows:<br>
-		-> 'python build.py'<br>
-
-	On unix-like systems like (macOS, Linux, ...):<br>
-		-> 'python3 build.py'<br>
+-> On Windows: 'python build.py'<br>
+-> On unix-like systems like (macOS, Linux, ...):'python3 build.py'<br>
