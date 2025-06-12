@@ -1,0 +1,22 @@
+[
+{
+  "directory": "/home/marcel/Dokumente/code_projects/cxx_init/build",
+  "command": "/usr/bin/g++-11   -g -std=gnu++20 -o CMakeFiles/cxx_init.dir/src/file.cpp.o -c /home/marcel/Dokumente/code_projects/cxx_init/src/file.cpp",
+  "file": "/home/marcel/Dokumente/code_projects/cxx_init/src/file.cpp"
+},
+{
+  "directory": "/home/marcel/Dokumente/code_projects/cxx_init/build",
+  "command": "/usr/bin/g++-11   -g -std=gnu++20 -o CMakeFiles/cxx_init.dir/src/helpers.cpp.o -c /home/marcel/Dokumente/code_projects/cxx_init/src/helpers.cpp",
+  "file": "/home/marcel/Dokumente/code_projects/cxx_init/src/helpers.cpp"
+},
+{
+  "directory": "/home/marcel/Dokumente/code_projects/cxx_init/build",
+  "command": "/usr/bin/g++-11   -g -std=gnu++20 -o CMakeFiles/cxx_init.dir/src/main.cpp.o -c /home/marcel/Dokumente/code_projects/cxx_init/src/main.cpp",
+  "file": "/home/marcel/Dokumente/code_projects/cxx_init/src/main.cpp"
+},
+{
+  "directory": "/home/marcel/Dokumente/code_projects/cxx_init/build",
+  "command": "/usr/bin/g++-11   -g -std=gnu++20 -o CMakeFiles/cxx_init.dir/src/program.cpp.o -c /home/marcel/Dokumente/code_projects/cxx_init/src/program.cpp",
+  "file": "/home/marcel/Dokumente/code_projects/cxx_init/src/program.cpp"
+}
+]
