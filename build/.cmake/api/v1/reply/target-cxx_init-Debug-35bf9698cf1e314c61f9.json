@@ -35,6 +35,9 @@
 			"compileCommandFragments" : 
 			[
 				{
+					"fragment" : "-g"
+				},
+				{
 					"fragment" : "-std=gnu++20"
 				}
 			],
@@ -61,6 +64,10 @@
 	{
 		"commandFragments" : 
 		[
+			{
+				"fragment" : "-g",
+				"role" : "flags"
+			},
 			{
 				"fragment" : "",
 				"role" : "flags"
