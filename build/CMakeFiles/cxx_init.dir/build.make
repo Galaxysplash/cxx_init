@@ -73,57 +73,57 @@ CMakeFiles/cxx_init.dir/src/file.cpp.o: CMakeFiles/cxx_init.dir/flags.make
 CMakeFiles/cxx_init.dir/src/file.cpp.o: /home/marcel/Dokumente/code_projects/cxx_init/src/file.cpp
 CMakeFiles/cxx_init.dir/src/file.cpp.o: CMakeFiles/cxx_init.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marcel/Dokumente/code_projects/cxx_init/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object CMakeFiles/cxx_init.dir/src/file.cpp.o"
-	/usr/bin/g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cxx_init.dir/src/file.cpp.o -MF CMakeFiles/cxx_init.dir/src/file.cpp.o.d -o CMakeFiles/cxx_init.dir/src/file.cpp.o -c /home/marcel/Dokumente/code_projects/cxx_init/src/file.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cxx_init.dir/src/file.cpp.o -MF CMakeFiles/cxx_init.dir/src/file.cpp.o.d -o CMakeFiles/cxx_init.dir/src/file.cpp.o -c /home/marcel/Dokumente/code_projects/cxx_init/src/file.cpp
 
 CMakeFiles/cxx_init.dir/src/file.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cxx_init.dir/src/file.cpp.i"
-	/usr/bin/g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marcel/Dokumente/code_projects/cxx_init/src/file.cpp > CMakeFiles/cxx_init.dir/src/file.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marcel/Dokumente/code_projects/cxx_init/src/file.cpp > CMakeFiles/cxx_init.dir/src/file.cpp.i
 
 CMakeFiles/cxx_init.dir/src/file.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cxx_init.dir/src/file.cpp.s"
-	/usr/bin/g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marcel/Dokumente/code_projects/cxx_init/src/file.cpp -o CMakeFiles/cxx_init.dir/src/file.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marcel/Dokumente/code_projects/cxx_init/src/file.cpp -o CMakeFiles/cxx_init.dir/src/file.cpp.s
 
 CMakeFiles/cxx_init.dir/src/helpers.cpp.o: CMakeFiles/cxx_init.dir/flags.make
 CMakeFiles/cxx_init.dir/src/helpers.cpp.o: /home/marcel/Dokumente/code_projects/cxx_init/src/helpers.cpp
 CMakeFiles/cxx_init.dir/src/helpers.cpp.o: CMakeFiles/cxx_init.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marcel/Dokumente/code_projects/cxx_init/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object CMakeFiles/cxx_init.dir/src/helpers.cpp.o"
-	/usr/bin/g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cxx_init.dir/src/helpers.cpp.o -MF CMakeFiles/cxx_init.dir/src/helpers.cpp.o.d -o CMakeFiles/cxx_init.dir/src/helpers.cpp.o -c /home/marcel/Dokumente/code_projects/cxx_init/src/helpers.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cxx_init.dir/src/helpers.cpp.o -MF CMakeFiles/cxx_init.dir/src/helpers.cpp.o.d -o CMakeFiles/cxx_init.dir/src/helpers.cpp.o -c /home/marcel/Dokumente/code_projects/cxx_init/src/helpers.cpp
 
 CMakeFiles/cxx_init.dir/src/helpers.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cxx_init.dir/src/helpers.cpp.i"
-	/usr/bin/g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marcel/Dokumente/code_projects/cxx_init/src/helpers.cpp > CMakeFiles/cxx_init.dir/src/helpers.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marcel/Dokumente/code_projects/cxx_init/src/helpers.cpp > CMakeFiles/cxx_init.dir/src/helpers.cpp.i
 
 CMakeFiles/cxx_init.dir/src/helpers.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cxx_init.dir/src/helpers.cpp.s"
-	/usr/bin/g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marcel/Dokumente/code_projects/cxx_init/src/helpers.cpp -o CMakeFiles/cxx_init.dir/src/helpers.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marcel/Dokumente/code_projects/cxx_init/src/helpers.cpp -o CMakeFiles/cxx_init.dir/src/helpers.cpp.s
 
 CMakeFiles/cxx_init.dir/src/main.cpp.o: CMakeFiles/cxx_init.dir/flags.make
 CMakeFiles/cxx_init.dir/src/main.cpp.o: /home/marcel/Dokumente/code_projects/cxx_init/src/main.cpp
 CMakeFiles/cxx_init.dir/src/main.cpp.o: CMakeFiles/cxx_init.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marcel/Dokumente/code_projects/cxx_init/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object CMakeFiles/cxx_init.dir/src/main.cpp.o"
-	/usr/bin/g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cxx_init.dir/src/main.cpp.o -MF CMakeFiles/cxx_init.dir/src/main.cpp.o.d -o CMakeFiles/cxx_init.dir/src/main.cpp.o -c /home/marcel/Dokumente/code_projects/cxx_init/src/main.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cxx_init.dir/src/main.cpp.o -MF CMakeFiles/cxx_init.dir/src/main.cpp.o.d -o CMakeFiles/cxx_init.dir/src/main.cpp.o -c /home/marcel/Dokumente/code_projects/cxx_init/src/main.cpp
 
 CMakeFiles/cxx_init.dir/src/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cxx_init.dir/src/main.cpp.i"
-	/usr/bin/g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marcel/Dokumente/code_projects/cxx_init/src/main.cpp > CMakeFiles/cxx_init.dir/src/main.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marcel/Dokumente/code_projects/cxx_init/src/main.cpp > CMakeFiles/cxx_init.dir/src/main.cpp.i
 
 CMakeFiles/cxx_init.dir/src/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cxx_init.dir/src/main.cpp.s"
-	/usr/bin/g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marcel/Dokumente/code_projects/cxx_init/src/main.cpp -o CMakeFiles/cxx_init.dir/src/main.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marcel/Dokumente/code_projects/cxx_init/src/main.cpp -o CMakeFiles/cxx_init.dir/src/main.cpp.s
 
 CMakeFiles/cxx_init.dir/src/program.cpp.o: CMakeFiles/cxx_init.dir/flags.make
 CMakeFiles/cxx_init.dir/src/program.cpp.o: /home/marcel/Dokumente/code_projects/cxx_init/src/program.cpp
 CMakeFiles/cxx_init.dir/src/program.cpp.o: CMakeFiles/cxx_init.dir/compiler_depend.ts
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/marcel/Dokumente/code_projects/cxx_init/build/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object CMakeFiles/cxx_init.dir/src/program.cpp.o"
-	/usr/bin/g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cxx_init.dir/src/program.cpp.o -MF CMakeFiles/cxx_init.dir/src/program.cpp.o.d -o CMakeFiles/cxx_init.dir/src/program.cpp.o -c /home/marcel/Dokumente/code_projects/cxx_init/src/program.cpp
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT CMakeFiles/cxx_init.dir/src/program.cpp.o -MF CMakeFiles/cxx_init.dir/src/program.cpp.o.d -o CMakeFiles/cxx_init.dir/src/program.cpp.o -c /home/marcel/Dokumente/code_projects/cxx_init/src/program.cpp
 
 CMakeFiles/cxx_init.dir/src/program.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/cxx_init.dir/src/program.cpp.i"
-	/usr/bin/g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marcel/Dokumente/code_projects/cxx_init/src/program.cpp > CMakeFiles/cxx_init.dir/src/program.cpp.i
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/marcel/Dokumente/code_projects/cxx_init/src/program.cpp > CMakeFiles/cxx_init.dir/src/program.cpp.i
 
 CMakeFiles/cxx_init.dir/src/program.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/cxx_init.dir/src/program.cpp.s"
-	/usr/bin/g++-11 $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marcel/Dokumente/code_projects/cxx_init/src/program.cpp -o CMakeFiles/cxx_init.dir/src/program.cpp.s
+	/usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/marcel/Dokumente/code_projects/cxx_init/src/program.cpp -o CMakeFiles/cxx_init.dir/src/program.cpp.s
 
 # Object files for target cxx_init
 cxx_init_OBJECTS = \
