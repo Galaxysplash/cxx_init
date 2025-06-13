@@ -17,4 +17,6 @@ int main(int argc, const char **argv)
     {
         std::cerr << "C++ Fatal: " << e.what() << '\n';
     }
+
+    return 0;
 }

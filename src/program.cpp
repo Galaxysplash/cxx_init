@@ -94,7 +94,6 @@ void Program::execute(const std::string &project_name)
     std::stringstream src_directory;
     src_directory << project_directory.str() << "/src";
 
-    File src_file = {"main.cpp", "#include <iostream>\n\nint main()\n{\n\tstd::cout << \"Hello World!\\n\";\n\n\treturn 0;\n}"};
-    std::cout << "done!\n";
+    File src_file = {"main.cpp", "#include <iostream>\n\nint main(int argc, const char* argv[])\n{\n\tstd::cout << \"Hello World!\\n\";\n\n\treturn 0;\n}"};
     Helpers::create_file(src_directory.str(), src_file.get_name(), src_file.get_content());
 }
