@@ -68,7 +68,7 @@ auto Program::setup(
         << "else:\n"
         << "\tsubprocess.run(\"rm -rf build\", shell = True)\n\n"
 
-        << "if not os.path.exists(\"build\"):"
+        << "if not os.path.exists(\"build\"):\n"
         << "\tsubprocess.run(\"mkdir build\", shell=True)\n\n"
 
         << "result = subprocess.run(\n"

@@ -25,6 +25,8 @@ if result.stderr:
 	print(result.stderr.decode())
 
 if platform.system() == "Windows":
-	if os.path.exists(f".\\build\\{project_name}"):		subprocess.run([f".\\build\\{project_name}.exe"], check = True)
+	if os.path.exists(f".\\build\\{project_name}"):
+		subprocess.run([f".\\build\\{project_name}.exe"], check = True)
 else:
-	if os.path.exists(f"./build/{project_name}"):		subprocess.run([f"./build/{project_name}"], check = True)
+	if os.path.exists(f"./build/{project_name}"):
+		subprocess.run([f"./build/{project_name}"], check = True)
