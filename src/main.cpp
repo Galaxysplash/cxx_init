@@ -8,8 +8,15 @@ auto main(int argc, const char **argv) -> int
 {
     try
     {
-        Helpers::check_args(argc);
-        Program::execute(argv[1]);
+#ifdef _WIN32
+        system("cls");
+#else
+        system("clear");
+#endif
+        if (Helpers::check_args(argc))
+        {
+            Program::execute(argv[1]);
+        }
     }
     catch (const std::exception &e)
     {

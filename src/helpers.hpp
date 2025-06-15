@@ -7,7 +7,7 @@
 
 struct Helpers final
 {
-    static auto check_args(const int argc) -> void;
+    static auto check_args(const int argc) -> bool;
     static auto create_file(
         const std::string &project_dir,
         const std::string &file_name,

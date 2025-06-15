@@ -3,14 +3,14 @@
 #include <iostream>
 #include <sstream>
 
-auto Helpers::check_args(const int argc) -> void
+auto Helpers::check_args(const int argc) -> bool
 {
     std::stringstream err_msg;
 
     switch (argc)
     {
     case 2:
-        return;
+        return true;
     case 1:
         err_msg
             << "sorry. no project name given.\n"
@@ -26,7 +26,7 @@ auto Helpers::check_args(const int argc) -> void
         break;
     }
 
-    throw std::runtime_error(err_msg.str());
+    return false;
 }
 
 auto Helpers::create_file(
