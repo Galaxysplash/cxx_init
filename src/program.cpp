@@ -75,10 +75,14 @@ auto Program::setup(
         << "f\"" << "conan install . --build=missing -of build "
         << "&& cmake . -B build && make -C build"
         << "\""
-        << ", check=True, shell=True)\n\n"
+        << ",\n check=True,\n shell=True,"
+        << "stdout=subprocess.PIPE,\n"
+        << "stderr=subprocess.PIPE)\n\n"
 
         << "if result.stdout:\n"
         << "\tprint(result.stdout.decode())\n"
+        << "if result.stderr:\n"
+        << "\tprint(result.stderr.decode())\n\n"
 
         << "if platform.system() == \"Windows\":\n"
         << "\tif os.path.exists(f\".\\\\build\\\\{project_name}\"):"
