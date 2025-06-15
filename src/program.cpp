@@ -155,7 +155,10 @@ auto Program::post_setup(
     git_add_cmd << "git add -C " << project_directory.str() << "*";
     git_commit_cmd << "git commit -C " << project_directory.str() << "-a -m \"init\"";
 
-    system(git_init_cmd.str().c_str());
+    if (system(git_init_cmd.str().c_str()))
+    {
+        std::cerr << "\nerror initializing repository.\n";
+    }
 
     if (system(git_add_cmd.str().c_str()))
     {
