@@ -12,7 +12,13 @@ else:
 if not os.path.exists("build"):
     subprocess.run("mkdir build", shell=True)
 
-result = subprocess.run("conan install . --build=missing -of build && cmake . -B build && make -C build", check=True, shell=True, stdout=subprocess.PIPE, stderr=subprocess.PIPE)
+result = subprocess.run(
+    "conan install . --build=missing -of build && cmake . -B build && make -C build",
+    check=True,
+    shell=True,
+    stdout=subprocess.PIPE,
+    stderr=subprocess.PIPE
+)
 
 if result.stdout:
     print(result.stdout.decode())
