@@ -18,5 +18,5 @@ struct Helpers final
         const std::string &folder_name);
 
     static std::stringstream get_project_directory(const std::string &project_name);
-    static std::stringstream get_src_directory();
+    static std::stringstream get_src_directory(const std::string &project_name);
 };

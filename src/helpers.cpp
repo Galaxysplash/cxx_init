@@ -47,7 +47,7 @@ void Helpers::create_folder(
     std::filesystem::create_directory(stringstream.str());
 }
 
-std::stringstream Helpers::get_project_directory()
+std::stringstream Helpers::get_project_directory(const std::string &project_name)
 {
     std::stringstream project_directory;
     project_directory << std::filesystem::current_path().c_str() << "/" << project_name;
@@ -55,10 +55,10 @@ std::stringstream Helpers::get_project_directory()
     return project_directory;
 }
 
-std::stringstream Helpers::get_src_directory()
+std::stringstream Helpers::get_src_directory(const std::string &project_name)
 {
     std::stringstream src_directory;
-    src_directory << project_directory.str() << "/src";
+    src_directory << get_project_directory(project_name).str() << "/src";
 
     return src_directory;
 }

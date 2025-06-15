@@ -5,8 +5,8 @@
 
 auto Program::execute(const std::string &project_name) -> void
 {
-    std::stringstream project_directory;
-    std::stringstream src_directory;
+    const std::stringstream project_directory = Helpers::get_project_directory(project_name);
+    const std::stringstream src_directory = Helpers::get_src_directory(project_name);
 
     const std::initializer_list<std::string> folder_names = {
         "build", "src"};
