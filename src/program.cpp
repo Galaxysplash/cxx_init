@@ -161,7 +161,7 @@ auto Program::post_setup(
 
     std::cout
         << "NOTE: Leave blank for local only.\n"
-        << "URL: ";
+        << "URL for REMOTE REPOSITORY: ";
 
     std::string url = "";
     url.reserve(40);
