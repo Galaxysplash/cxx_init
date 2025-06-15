@@ -184,6 +184,8 @@ auto Program::post_setup(
         system(git_push_cmd.str().c_str());
     }
 
+    std::cout << "\n";
+
     open_cmd << "code " << project_name << "\n";
     system(open_cmd.str().c_str());
 }
