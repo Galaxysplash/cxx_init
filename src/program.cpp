@@ -160,8 +160,8 @@ auto Program::post_setup(
     system(git_commit_cmd.str().c_str());
 
     std::cout
-        << "NOTE: Leave blank for local only.\n"
-        << "URL for REMOTE REPOSITORY: ";
+        << "NOTE: Leave blank for LOCAL repository ONLY.\n"
+        << "URL for REMOTE repository: ";
 
     std::string url = "";
     url.reserve(40);
