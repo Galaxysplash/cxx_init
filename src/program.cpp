@@ -85,10 +85,10 @@ auto Program::setup(
         << "\tprint(result.stderr.decode())\n\n"
 
         << "if platform.system() == \"Windows\":\n"
-        << "\tif os.path.exists(f\".\\\\build\\\\{project_name}\"):"
+        << "\tif os.path.exists(f\".\\\\build\\\\{project_name}\"):\n"
         << "\t\tsubprocess.run([f\".\\\\build\\\\{project_name}.exe\"], check = True)\n"
         << "else:\n"
-        << "\tif os.path.exists(f\"./build/{project_name}\"):"
+        << "\tif os.path.exists(f\"./build/{project_name}\"):\n"
         << "\t\tsubprocess.run([f\"./build/{project_name}\"], check = True)\n";
 
     readme_file_content
