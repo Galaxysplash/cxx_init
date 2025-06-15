@@ -8,10 +8,8 @@ auto main(int argc, const char **argv) -> int
 {
     try
     {
-        if (Helpers::check_args(argc))
-        {
-            Program::execute(argv[1]);
-        }
+        Helpers::check_args(argc);
+        Program::execute(argv[1]);
     }
     catch (const std::exception &e)
     {

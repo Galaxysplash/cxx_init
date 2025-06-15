@@ -7,16 +7,17 @@
 
 struct Helpers final
 {
-    static bool check_args(const int argc);
-    static void create_file(
+    static auto check_args(const int argc) -> void;
+    static auto create_file(
         const std::string &project_dir,
         const std::string &file_name,
-        const std::string &content = "");
+        const std::string &content = "") -> void;
 
-    static void create_folder(
+    static auto create_folder(
         const std::string &project_dir,
-        const std::string &folder_name);
+        const std::string &folder_name) -> void;
 
-    static std::stringstream get_project_directory(const std::string &project_name);
-    static std::stringstream get_src_directory(const std::string &project_name);
+    static auto get_project_directory(const std::string &project_name) -> std::stringstream;
+    static auto get_src_directory(const std::stringstream &project_directory) -> std::stringstream;
+    static auto get_src_directory(const std::string &project_name) -> std::stringstream;
 };

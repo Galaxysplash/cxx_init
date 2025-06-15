@@ -4,7 +4,20 @@
 
 struct Program final
 {
-    static auto execute(const std::string &project_name) -> void;
+    static auto execute(
+        const std::string &project_name) -> void;
+
+    static auto pre_setup(
+        const std::stringstream &project_directory) -> void;
+
+    static auto setup(
+        const std::string &project_name,
+        const std::stringstream &project_directory) -> void;
+
+    static auto post_setup(
+        const std::string &project_name,
+        const std::stringstream &project_directory) -> void;
+
     static auto create_folders(
         const std::stringstream &project_directory,
         const std::initializer_list<std::string> &folder_names) -> void;

@@ -3,10 +3,27 @@
 
 #include <iostream>
 
-auto Program::execute(const std::string &project_name) -> void
+auto Program::execute(
+    const std::string &project_name) -> void
 {
     const std::stringstream &project_directory = Helpers::get_project_directory(project_name);
-    const std::stringstream &src_directory = Helpers::get_src_directory(project_name);
+
+    pre_setup(project_directory);
+    setup(project_name, project_directory);
+    post_setup(project_name, project_directory);
+}
+
+auto Program::pre_setup(
+    const std::stringstream &project_directory) -> void
+{
+    std::filesystem::remove_all(project_directory.str());
+}
+
+auto Program::setup(
+    const std::string &project_name,
+    const std::stringstream &project_directory) -> void
+{
+    const std::stringstream &src_directory = Helpers::get_src_directory(project_directory);
 
     const std::initializer_list<std::string> folder_names = {
         "build", "src"};
@@ -102,7 +119,12 @@ auto Program::execute(const std::string &project_name) -> void
     }
 
     Helpers::create_file(src_directory.str(), src_file.get_name(), src_file.get_content());
+}
 
+auto Program::post_setup(
+    const std::string &project_name,
+    const std::stringstream &project_directory) -> void
+{
     std::stringstream open_cmd;
     std::stringstream first_run_cmd;
 
