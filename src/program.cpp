@@ -116,14 +116,15 @@ auto Program::execute(const std::string &project_name) -> void
     constexpr auto PYTHON_CMD = "python3";
 #endif
     first_run_cmd
+        << PYTHON_CMD
+        << " "
         << project_name
         << SEPERATOR
-        << PYTHON_CMD
         << " run.py\n";
 
     system(first_run_cmd.str().c_str());
 
-    std::cout << "Run your project by using '" << PYTHON_CMD << " run.py'\n";
+    std::cout << "NOTE: project can run by using '" << PYTHON_CMD << " run.py'\n\n";
 
     system("git init --initial-branch=main");
     system("git add *");
