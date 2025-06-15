@@ -156,8 +156,16 @@ auto Program::post_setup(
     git_commit_cmd << "git commit -C " << project_directory.str() << "-a -m \"init\"";
 
     system(git_init_cmd.str().c_str());
-    system(git_add_cmd.str().c_str());
-    system(git_commit_cmd.str().c_str());
+
+    if (system(git_add_cmd.str().c_str()))
+    {
+        std::cerr << "\nerror adding files to git repository.\n";
+    }
+
+    if (system(git_commit_cmd.str().c_str()))
+    {
+        std::cerr << "\nerror making initial commit.\n";
+    }
 
     std::cout
         << "\nNOTE: Leave blank for LOCAL repository ONLY.\n"
@@ -166,6 +174,8 @@ auto Program::post_setup(
     std::string url = "";
     url.reserve(40);
     std::cin >> url;
+
+    std::cout << "\n";
 
     if (
         url != "" and
