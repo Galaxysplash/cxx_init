@@ -5,8 +5,8 @@
 
 auto Program::execute(const std::string &project_name) -> void
 {
-    const std::stringstream project_directory = Helpers::get_project_directory(project_name);
-    const std::stringstream src_directory = Helpers::get_src_directory(project_name);
+    const std::stringstream &project_directory = Helpers::get_project_directory(project_name);
+    const std::stringstream &src_directory = Helpers::get_src_directory(project_name);
 
     const std::initializer_list<std::string> folder_names = {
         "build", "src"};
@@ -126,9 +126,18 @@ auto Program::execute(const std::string &project_name) -> void
 
     std::cout << "NOTE: project can run by using '" << PYTHON_CMD << " run.py'\n\n";
 
-    system("git init --initial-branch=main");
-    system("git add *");
-    system("git commit -a -m \"init\"");
+    std::stringstream
+        git_init_cmd,
+        git_add_cmd,
+        git_commit_cmd;
+
+    git_init_cmd << "git init -C " << project_directory.str() << " --initial-branch=main";
+    git_add_cmd << "git add -C " << project_directory.str() << "*";
+    git_commit_cmd << "git commit -C " << project_directory.str() << "-a -m \"init\"";
+
+    system(git_init_cmd.str().c_str());
+    system(git_add_cmd.str().c_str());
+    system(git_commit_cmd.str().c_str());
 
     std::cout << "url of the remote repo...\n"
               << "(if you only want a local repo, "
@@ -143,12 +152,15 @@ auto Program::execute(const std::string &project_name) -> void
         url.find(';') == std::string::npos and
         url.find('&') == std::string::npos)
     {
-        std::stringstream remote_add_cmd;
+        std::stringstream
+            remote_add_cmd,
+            git_push_cmd;
 
-        remote_add_cmd << "git remote add origin " << url;
+        remote_add_cmd << "git -C " << project_directory.str() << " remote add origin " << url;
+        git_push_cmd << "git push -C " << project_directory.str() << " -u origin main";
 
         system(remote_add_cmd.str().c_str());
-        system("git push --set-upstream origin main");
+        system(git_push_cmd.str().c_str());
     }
 
     open_cmd << "code " << project_name << "\n";
