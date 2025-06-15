@@ -70,7 +70,7 @@ auto Program::setup(
         << "&& cmake . -B build && make -C build"
         << "\""
         << ", check=True, shell=True)\n"
-        << "print(result.stderr.decode())\n\n"
+        << "print(result.stdout.decode())\n\n"
         << "if platform.system() == \"Windows\":\n"
         << "\tsubprocess.run([f\".\\\\build\\\\{app_name}.exe\"], check = True)\n"
         << "else:\n"
