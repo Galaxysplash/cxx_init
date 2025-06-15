@@ -74,7 +74,7 @@ auto Program::setup(
         << "result = subprocess.run(\n"
         << "\tf\"conan install . --build=missing -of build "
         << "&& cmake . -B build && make -C build\""
-        << ",\n\t check=True,\n\t shell=True\n,"
+        << ",\n\t check=True,\n\t shell=True,\n"
         << "\tstdout=subprocess.PIPE,\n"
         << "\tstderr=subprocess.PIPE\n)\n\n"
 
