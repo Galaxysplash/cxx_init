@@ -16,7 +16,7 @@ auto Program::execute(const std::string &project_name) -> void
         python_run_file_content,
         readme_file_content,
         dot_gitignore_content,
-        conan_file_txt;
+        conan_file_txt_content;
 
     std::stringstream
         main_cpp_content;
@@ -67,22 +67,25 @@ auto Program::execute(const std::string &project_name) -> void
                         << "-> On unix-like systems like (macOS, Linux, freeBSD, ...): "
                         << "'python3 run.py'<br>\n";
 
-    dot_gitignore_content << "build\n"
-                          << ".vscode\n";
+    dot_gitignore_content
+        << "build\n"
+        << ".vscode\n";
 
-    conan_file_txt << "[requires]\n"
-                   << "[generators]\n"
-                   << "CMakeDeps\n"
-                   << "CMakeToolchain\n\n"
-                   << "[layout]\n"
-                   << "cmake_layout\n";
+    conan_file_txt_content
+        << "# uncomment for external dependencies"
+        << "# [requires]\n\n\n"
+        << "[generators]\n"
+        << "CMakeDeps\n"
+        << "CMakeToolchain\n\n"
+        << "[layout]\n"
+        << "cmake_layout\n";
 
     File global_files[] = {
         {"CMakeLists.txt", cmakelists_content.str()},
         {"run.py", python_run_file_content.str()},
         {".gitignore", dot_gitignore_content.str()},
         {"README.md", readme_file_content.str()},
-        {"conanfile.txt", conan_file_txt.str()}};
+        {"conanfile.txt", conan_file_txt_content.str()}};
 
     File src_file = {"main.cpp", main_cpp_content.str()};
 
