@@ -76,7 +76,7 @@ auto Program::execute(const std::string &project_name) -> void
         << ".vscode\n";
 
     conan_file_txt_content
-        << "# uncomment for external dependencies"
+        << "# uncomment for external dependencies\n"
         << "# [requires]\n\n\n"
         << "[generators]\n"
         << "CMakeDeps\n"
@@ -120,11 +120,9 @@ auto Program::execute(const std::string &project_name) -> void
         << " "
         << project_name
         << SEPERATOR
-        << " run.py\n";
+        << "run.py\n";
 
     system(first_run_cmd.str().c_str());
-
-    std::cout << "NOTE: project can run by using '" << PYTHON_CMD << " run.py'\n\n";
 
     std::stringstream
         git_init_cmd,
