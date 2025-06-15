@@ -7,8 +7,8 @@ if platform.system() == "Windows":
     subprocess.run("rmdir /S /Q build", shell = True)
 else:
     subprocess.run("rm -rf build", shell = True)
-    
-subprocess.run("mkdir build")
+
+subprocess.run("mkdir build", shell=True)
 
 subprocess.run("conan install . --build = missing -of build && cmake.- B build && make - C", check=True, shell=True)
 

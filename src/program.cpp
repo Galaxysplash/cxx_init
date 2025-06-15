@@ -44,7 +44,7 @@ auto Program::execute(const std::string &project_name) -> void
                             << "\tsubprocess.run(\"rmdir /S /Q build\", shell = True)\n"
                             << "else:\n"
                             << "\tsubprocess.run(\"rm -rf build\", shell = True)\n\n"
-                            << "subprocess.run(\"mkdir build\")\n\n"
+                            << "subprocess.run(\"mkdir build\", shell=True)\n\n"
                             << "subprocess.run("
                             << "f\"" << "conan install . --build = missing -of build "
                             << "&& cmake.- B build && make - C"
