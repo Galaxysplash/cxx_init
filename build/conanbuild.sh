@@ -1,1 +1,0 @@
-. "/home/marcel/Dokumente/code_projects/cci/build/conanbuildenv-release-x86_64.sh"

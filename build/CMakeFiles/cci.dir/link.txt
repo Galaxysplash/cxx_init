@@ -1,1 +1,0 @@
-/usr/bin/c++ CMakeFiles/cci.dir/src/file.cpp.o CMakeFiles/cci.dir/src/helpers.cpp.o CMakeFiles/cci.dir/src/main.cpp.o CMakeFiles/cci.dir/src/program.cpp.o -o cci 
