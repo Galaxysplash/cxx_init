@@ -47,7 +47,7 @@ auto Program::execute(const std::string &project_name) -> void
                             << "subprocess.run(\"mkdir build\", shell=True)\n\n"
                             << "subprocess.run("
                             << "f\"" << "conan install . --build = missing -of build "
-                            << "&& cmake.- B build && make - C"
+                            << "&& cmake . -B build && make - C build"
                             << "\""
                             << ", check=True, shell=True)\n\n"
                             << "if platform.system() == \"Windows\":\n"
