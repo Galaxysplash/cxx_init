@@ -73,7 +73,7 @@ auto Program::setup(
         << "if result.stdout:\n"
         << "\tprint(result.stdout.decode())\n"
         << "else:\n"
-        << "\tprint(\"No output from the command.\")\n\n\n\n"
+        << "\tprint(\"No output from the command.\")\n\n"
         << "if platform.system() == \"Windows\":\n"
         << "\tsubprocess.run([f\".\\\\build\\\\{app_name}.exe\"], check = True)\n"
         << "else:\n"
