@@ -2,7 +2,10 @@
 
 #include "helpers.hpp"
 
-struct Program
+struct Program final
 {
-    static void execute(const std::string &project_name);
+    static auto execute(const std::string &project_name) -> void;
+    static auto create_folders(
+        const std::stringstream &project_directory,
+        const std::initializer_list<std::string> &folder_names) -> void;
 };

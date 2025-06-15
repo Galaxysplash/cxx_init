@@ -20,23 +20,22 @@ CMAKE_ADDR2LINE:FILEPATH=/usr/bin/addr2line
 //Path to a program.
 CMAKE_AR:FILEPATH=/usr/bin/ar
 
-//Choose the type of build, options are: None Debug Release RelWithDebInfo
-// MinSizeRel ...
-CMAKE_BUILD_TYPE:STRING=
+//No help, variable specified on the command line.
+CMAKE_BUILD_TYPE:STRING=Debug
 
 //Enable/Disable color output during build.
 CMAKE_COLOR_MAKEFILE:BOOL=ON
 
-//CXX compiler
-CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/c++
+//No help, variable specified on the command line.
+CMAKE_CXX_COMPILER:FILEPATH=/usr/bin/g++-11
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_CXX_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-12
+CMAKE_CXX_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-11
 
 //A wrapper around 'ranlib' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-12
+CMAKE_CXX_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-11
 
 //Flags used by the CXX compiler during all build types.
 CMAKE_CXX_FLAGS:STRING=
@@ -53,16 +52,16 @@ CMAKE_CXX_FLAGS_RELEASE:STRING=-O3 -DNDEBUG
 //Flags used by the CXX compiler during RELWITHDEBINFO builds.
 CMAKE_CXX_FLAGS_RELWITHDEBINFO:STRING=-O2 -g -DNDEBUG
 
-//C compiler
-CMAKE_C_COMPILER:FILEPATH=/usr/bin/cc
+//No help, variable specified on the command line.
+CMAKE_C_COMPILER:FILEPATH=/usr/bin/gcc-11
 
 //A wrapper around 'ar' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_C_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-12
+CMAKE_C_COMPILER_AR:FILEPATH=/usr/bin/gcc-ar-11
 
 //A wrapper around 'ranlib' adding the appropriate '--plugin' option
 // for the GCC compiler
-CMAKE_C_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-12
+CMAKE_C_COMPILER_RANLIB:FILEPATH=/usr/bin/gcc-ranlib-11
 
 //Flags used by the C compiler during all build types.
 CMAKE_C_FLAGS:STRING=
@@ -97,8 +96,8 @@ CMAKE_EXE_LINKER_FLAGS_RELEASE:STRING=
 //Flags used by the linker during RELWITHDEBINFO builds.
 CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 
-//Enable/Disable output of compile commands during generation.
-CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=
+//No help, variable specified on the command line.
+CMAKE_EXPORT_COMPILE_COMMANDS:BOOL=TRUE
 
 //Value Computed by CMake.
 CMAKE_FIND_PACKAGE_REDIRECTS_DIR:STATIC=/home/marcel/Dokumente/code_projects/cxx_init/build/CMakeFiles/pkgRedirects
@@ -148,7 +147,7 @@ CMAKE_PROJECT_DESCRIPTION:STATIC=
 CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 
 //Value Computed by CMake
-CMAKE_PROJECT_NAME:STATIC=cxx_init
+CMAKE_PROJECT_NAME:STATIC=cci
 
 //Path to a program.
 CMAKE_RANLIB:FILEPATH=/usr/bin/ranlib
@@ -213,6 +212,69 @@ CMAKE_STRIP:FILEPATH=/usr/bin/strip
 CMAKE_VERBOSE_MAKEFILE:BOOL=FALSE
 
 //Value Computed by CMake
+c_BINARY_DIR:STATIC=/home/marcel/Dokumente/code_projects/cxx_init/build
+
+//Value Computed by CMake
+c_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+c_SOURCE_DIR:STATIC=/home/marcel/Dokumente/code_projects/cxx_init
+
+//Value Computed by CMake
+cc_BINARY_DIR:STATIC=/home/marcel/Dokumente/code_projects/cxx_init/build
+
+//Value Computed by CMake
+cc_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+cc_SOURCE_DIR:STATIC=/home/marcel/Dokumente/code_projects/cxx_init
+
+//Value Computed by CMake
+cci_BINARY_DIR:STATIC=/home/marcel/Dokumente/code_projects/cxx_init/build
+
+//Value Computed by CMake
+cci_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+cci_SOURCE_DIR:STATIC=/home/marcel/Dokumente/code_projects/cxx_init
+
+//Value Computed by CMake
+cinit_BINARY_DIR:STATIC=/home/marcel/Dokumente/code_projects/cxx_init/build
+
+//Value Computed by CMake
+cinit_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+cinit_SOURCE_DIR:STATIC=/home/marcel/Dokumente/code_projects/cxx_init
+
+//Value Computed by CMake
+cx_BINARY_DIR:STATIC=/home/marcel/Dokumente/code_projects/cxx_init/build
+
+//Value Computed by CMake
+cx_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+cx_SOURCE_DIR:STATIC=/home/marcel/Dokumente/code_projects/cxx_init
+
+//Value Computed by CMake
+cxinit_BINARY_DIR:STATIC=/home/marcel/Dokumente/code_projects/cxx_init/build
+
+//Value Computed by CMake
+cxinit_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+cxinit_SOURCE_DIR:STATIC=/home/marcel/Dokumente/code_projects/cxx_init
+
+//Value Computed by CMake
+cxx_BINARY_DIR:STATIC=/home/marcel/Dokumente/code_projects/cxx_init/build
+
+//Value Computed by CMake
+cxx_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+cxx_SOURCE_DIR:STATIC=/home/marcel/Dokumente/code_projects/cxx_init
+
+//Value Computed by CMake
 cxx_init_BINARY_DIR:STATIC=/home/marcel/Dokumente/code_projects/cxx_init/build
 
 //Value Computed by CMake
@@ -220,6 +282,51 @@ cxx_init_IS_TOP_LEVEL:STATIC=ON
 
 //Value Computed by CMake
 cxx_init_SOURCE_DIR:STATIC=/home/marcel/Dokumente/code_projects/cxx_init
+
+//Value Computed by CMake
+cxxinit_BINARY_DIR:STATIC=/home/marcel/Dokumente/code_projects/cxx_init/build
+
+//Value Computed by CMake
+cxxinit_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+cxxinit_SOURCE_DIR:STATIC=/home/marcel/Dokumente/code_projects/cxx_init
+
+//Value Computed by CMake
+i_BINARY_DIR:STATIC=/home/marcel/Dokumente/code_projects/cxx_init/build
+
+//Value Computed by CMake
+i_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+i_SOURCE_DIR:STATIC=/home/marcel/Dokumente/code_projects/cxx_init
+
+//Value Computed by CMake
+in_BINARY_DIR:STATIC=/home/marcel/Dokumente/code_projects/cxx_init/build
+
+//Value Computed by CMake
+in_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+in_SOURCE_DIR:STATIC=/home/marcel/Dokumente/code_projects/cxx_init
+
+//Value Computed by CMake
+ini_BINARY_DIR:STATIC=/home/marcel/Dokumente/code_projects/cxx_init/build
+
+//Value Computed by CMake
+ini_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+ini_SOURCE_DIR:STATIC=/home/marcel/Dokumente/code_projects/cxx_init
+
+//Value Computed by CMake
+init_BINARY_DIR:STATIC=/home/marcel/Dokumente/code_projects/cxx_init/build
+
+//Value Computed by CMake
+init_IS_TOP_LEVEL:STATIC=ON
+
+//Value Computed by CMake
+init_SOURCE_DIR:STATIC=/home/marcel/Dokumente/code_projects/cxx_init
 
 
 ########################

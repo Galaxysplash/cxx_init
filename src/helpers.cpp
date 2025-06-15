@@ -1,6 +1,7 @@
 #include "helpers.hpp"
 
 #include <iostream>
+#include <sstream>
 
 bool Helpers::check_args(const int argc)
 {
@@ -44,4 +45,20 @@ void Helpers::create_folder(
     std::stringstream stringstream;
     stringstream << project_dir << "/" << folder_name;
     std::filesystem::create_directory(stringstream.str());
+}
+
+std::stringstream Helpers::get_project_directory()
+{
+    std::stringstream project_directory;
+    project_directory << std::filesystem::current_path().c_str() << "/" << project_name;
+
+    return project_directory;
+}
+
+std::stringstream Helpers::get_src_directory()
+{
+    std::stringstream src_directory;
+    src_directory << project_directory.str() << "/src";
+
+    return src_directory;
 }

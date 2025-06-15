@@ -63,7 +63,7 @@ CMAKE_BINARY_DIR = /home/marcel/Dokumente/code_projects/cxx_init/build
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/cxx_init.dir/all
+all: CMakeFiles/cci.dir/all
 .PHONY : all
 
 # The main recursive "preinstall" target.
@@ -71,34 +71,34 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/cxx_init.dir/clean
+clean: CMakeFiles/cci.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/cxx_init.dir
+# Target rules for target CMakeFiles/cci.dir
 
 # All Build rule for target.
-CMakeFiles/cxx_init.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cxx_init.dir/build.make CMakeFiles/cxx_init.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cxx_init.dir/build.make CMakeFiles/cxx_init.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/marcel/Dokumente/code_projects/cxx_init/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target cxx_init"
-.PHONY : CMakeFiles/cxx_init.dir/all
+CMakeFiles/cci.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cci.dir/build.make CMakeFiles/cci.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cci.dir/build.make CMakeFiles/cci.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=/home/marcel/Dokumente/code_projects/cxx_init/build/CMakeFiles --progress-num=1,2,3,4,5 "Built target cci"
+.PHONY : CMakeFiles/cci.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/cxx_init.dir/rule: cmake_check_build_system
+CMakeFiles/cci.dir/rule: cmake_check_build_system
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/marcel/Dokumente/code_projects/cxx_init/build/CMakeFiles 5
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/cxx_init.dir/all
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/cci.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start /home/marcel/Dokumente/code_projects/cxx_init/build/CMakeFiles 0
-.PHONY : CMakeFiles/cxx_init.dir/rule
+.PHONY : CMakeFiles/cci.dir/rule
 
 # Convenience name for target.
-cxx_init: CMakeFiles/cxx_init.dir/rule
-.PHONY : cxx_init
+cci: CMakeFiles/cci.dir/rule
+.PHONY : cci
 
 # clean rule for target.
-CMakeFiles/cxx_init.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cxx_init.dir/build.make CMakeFiles/cxx_init.dir/clean
-.PHONY : CMakeFiles/cxx_init.dir/clean
+CMakeFiles/cci.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cci.dir/build.make CMakeFiles/cci.dir/clean
+.PHONY : CMakeFiles/cci.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

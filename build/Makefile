@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named cxx_init
+# Target rules for targets named cci
 
 # Build rule for target.
-cxx_init: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cxx_init
-.PHONY : cxx_init
+cci: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 cci
+.PHONY : cci
 
 # fast build rule for target.
-cxx_init/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cxx_init.dir/build.make CMakeFiles/cxx_init.dir/build
-.PHONY : cxx_init/fast
+cci/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cci.dir/build.make CMakeFiles/cci.dir/build
+.PHONY : cci/fast
 
 src/file.o: src/file.cpp.o
 .PHONY : src/file.o
 
 # target to build an object file
 src/file.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cxx_init.dir/build.make CMakeFiles/cxx_init.dir/src/file.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cci.dir/build.make CMakeFiles/cci.dir/src/file.cpp.o
 .PHONY : src/file.cpp.o
 
 src/file.i: src/file.cpp.i
@@ -142,7 +142,7 @@ src/file.i: src/file.cpp.i
 
 # target to preprocess a source file
 src/file.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cxx_init.dir/build.make CMakeFiles/cxx_init.dir/src/file.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cci.dir/build.make CMakeFiles/cci.dir/src/file.cpp.i
 .PHONY : src/file.cpp.i
 
 src/file.s: src/file.cpp.s
@@ -150,7 +150,7 @@ src/file.s: src/file.cpp.s
 
 # target to generate assembly for a file
 src/file.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cxx_init.dir/build.make CMakeFiles/cxx_init.dir/src/file.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cci.dir/build.make CMakeFiles/cci.dir/src/file.cpp.s
 .PHONY : src/file.cpp.s
 
 src/helpers.o: src/helpers.cpp.o
@@ -158,7 +158,7 @@ src/helpers.o: src/helpers.cpp.o
 
 # target to build an object file
 src/helpers.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cxx_init.dir/build.make CMakeFiles/cxx_init.dir/src/helpers.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cci.dir/build.make CMakeFiles/cci.dir/src/helpers.cpp.o
 .PHONY : src/helpers.cpp.o
 
 src/helpers.i: src/helpers.cpp.i
@@ -166,7 +166,7 @@ src/helpers.i: src/helpers.cpp.i
 
 # target to preprocess a source file
 src/helpers.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cxx_init.dir/build.make CMakeFiles/cxx_init.dir/src/helpers.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cci.dir/build.make CMakeFiles/cci.dir/src/helpers.cpp.i
 .PHONY : src/helpers.cpp.i
 
 src/helpers.s: src/helpers.cpp.s
@@ -174,7 +174,7 @@ src/helpers.s: src/helpers.cpp.s
 
 # target to generate assembly for a file
 src/helpers.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cxx_init.dir/build.make CMakeFiles/cxx_init.dir/src/helpers.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cci.dir/build.make CMakeFiles/cci.dir/src/helpers.cpp.s
 .PHONY : src/helpers.cpp.s
 
 src/main.o: src/main.cpp.o
@@ -182,7 +182,7 @@ src/main.o: src/main.cpp.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cxx_init.dir/build.make CMakeFiles/cxx_init.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cci.dir/build.make CMakeFiles/cci.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -190,7 +190,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cxx_init.dir/build.make CMakeFiles/cxx_init.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cci.dir/build.make CMakeFiles/cci.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -198,7 +198,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cxx_init.dir/build.make CMakeFiles/cxx_init.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cci.dir/build.make CMakeFiles/cci.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 src/program.o: src/program.cpp.o
@@ -206,7 +206,7 @@ src/program.o: src/program.cpp.o
 
 # target to build an object file
 src/program.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cxx_init.dir/build.make CMakeFiles/cxx_init.dir/src/program.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cci.dir/build.make CMakeFiles/cci.dir/src/program.cpp.o
 .PHONY : src/program.cpp.o
 
 src/program.i: src/program.cpp.i
@@ -214,7 +214,7 @@ src/program.i: src/program.cpp.i
 
 # target to preprocess a source file
 src/program.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cxx_init.dir/build.make CMakeFiles/cxx_init.dir/src/program.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cci.dir/build.make CMakeFiles/cci.dir/src/program.cpp.i
 .PHONY : src/program.cpp.i
 
 src/program.s: src/program.cpp.s
@@ -222,7 +222,7 @@ src/program.s: src/program.cpp.s
 
 # target to generate assembly for a file
 src/program.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/cxx_init.dir/build.make CMakeFiles/cxx_init.dir/src/program.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/cci.dir/build.make CMakeFiles/cci.dir/src/program.cpp.s
 .PHONY : src/program.cpp.s
 
 # Help Target
@@ -233,7 +233,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... cxx_init"
+	@echo "... cci"
 	@echo "... src/file.o"
 	@echo "... src/file.i"
 	@echo "... src/file.s"

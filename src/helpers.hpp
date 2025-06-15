@@ -16,4 +16,7 @@ struct Helpers final
     static void create_folder(
         const std::string &project_dir,
         const std::string &folder_name);
+
+    static std::stringstream get_project_directory(const std::string &project_name);
+    static std::stringstream get_src_directory();
 };

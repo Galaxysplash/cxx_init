@@ -1,11 +1,11 @@
 #include "file.hpp"
 
-const std::string &File::get_name()
+auto File::get_name() -> const std::string &
 {
     return _name;
 }
 
-const std::string &File::get_content()
+auto File::get_content() -> const std::string &
 {
     return _content;
 }
