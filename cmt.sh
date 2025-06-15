@@ -3,4 +3,4 @@ rm -rf build
 git add -f *
 git commit -a -m "..."
 git push -f
-python3 run.py
+./test
