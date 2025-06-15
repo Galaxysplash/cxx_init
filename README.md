@@ -5,6 +5,7 @@ a small free and open source tool made for speeding up the process of creating a
 ->python3<br>
 ->git<br>
 ->make<br>
+->conan
 ->cmake 3.20 or higher
 ->vscode
 

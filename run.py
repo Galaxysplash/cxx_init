@@ -8,7 +8,7 @@ if platform.system() == "Windows":
 else:
     subprocess.run("rm -rf build", shell = True)
 
-subprocess.run("cmake . -B build && make -C build", shell=True)
+subprocess.run("conan install . --build = missing -of build && cmake.- B build && make - C", shell=True)
 
 if platform.system() == "Windows":
     subprocess.run([f".\\build\\{app_name}.exe"], check = True)
