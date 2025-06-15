@@ -57,27 +57,35 @@ auto Program::setup(
         << "add_executable(${PROJECT_NAME} ${SOURCES})\n";
 
     python_run_file_content
+        << "import os\n"
         << "import platform\n"
         << "import subprocess\n\n"
-        << "app_name: str = \"" << project_name << "\"\n\n"
+
+        << "project_name: str = \"" << project_name << "\"\n\n"
+
         << "if platform.system() == \"Windows\":\n"
         << "\tsubprocess.run(\"rmdir /S /Q build\", shell = True)\n"
         << "else:\n"
         << "\tsubprocess.run(\"rm -rf build\", shell = True)\n\n"
-        << "subprocess.run(\"mkdir build\", shell=True)\n\n"
+
+        << "if not os.path.exists(\"build\"):"
+        << "\tsubprocess.run(\"mkdir build\", shell=True)\n\n"
+
         << "result = subprocess.run("
         << "f\"" << "conan install . --build=missing -of build "
         << "&& cmake . -B build && make -C build"
         << "\""
         << ", check=True, shell=True)\n\n"
+
         << "if result.stdout:\n"
         << "\tprint(result.stdout.decode())\n"
-        << "else:\n"
-        << "\tprint(\"No output from the command.\")\n\n"
+
         << "if platform.system() == \"Windows\":\n"
-        << "\tsubprocess.run([f\".\\\\build\\\\{app_name}.exe\"], check = True)\n"
+        << "\tif os.path.exists(f\".\\\\build\\\\{project_name}\"):"
+        << "\t\tsubprocess.run([f\".\\\\build\\\\{project_name}.exe\"], check = True)\n"
         << "else:\n"
-        << "\tsubprocess.run([f\"./build/{app_name}\"], check = True)\n";
+        << "\tif os.path.exists(f\"./build/{project_name}\"):"
+        << "\t\tsubprocess.run([f\"./build/{project_name}\"], check = True)\n";
 
     readme_file_content
         << "# " << project_name

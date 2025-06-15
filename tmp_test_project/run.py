@@ -17,8 +17,6 @@ if result.stdout:
 else:
 	print("No output from the command.")
 
-
-
 if platform.system() == "Windows":
 	subprocess.run([f".\\build\\{app_name}.exe"], check = True)
 else:
