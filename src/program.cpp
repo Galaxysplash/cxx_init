@@ -98,24 +98,52 @@ auto Program::execute(const std::string &project_name) -> void
     std::stringstream open_cmd;
     std::stringstream first_run_cmd;
 
-    open_cmd << "code " << project_name << "\n";
-
 #ifdef _WIN32
-    first_run_cmd << project_name << "\\python3 run.py\n";
-#else
-    first_run_cmd << project_name << "/python3 run.py\n";
-#endif
+#define SEPERATOR "\\"
 
-    system(open_cmd.str().c_str());
+    constexpr auto PYTHON_CMD = "python";
+#else
+#define SEPERATOR "/"
+
+    constexpr auto PYTHON_CMD = "python3";
+#endif
+    first_run_cmd
+        << project_name
+        << SEPERATOR
+        << PYTHON_CMD
+        << " run.py\n";
+
     system(first_run_cmd.str().c_str());
 
-#ifdef _WIN32
-    constexpr auto python_cmd = "python";
-#else
-    constexpr auto python_cmd = "python3";
-#endif
+    std::cout << "Run your project by using '" << PYTHON_CMD << " run.py'\n";
 
-    std::cout << "Run your project by using '" << python_cmd << " run.py'\n";
+    system("git init --initial-branch=main");
+    system("git add *");
+    system("git commit -a -m \"init\"");
+
+    std::cout << "url of the remote repo...\n"
+              << "(if you only want a local repo, "
+              << "just leave it blank and hit enter)\n\nYou: ";
+
+    std::string url = "";
+    url.reserve(40);
+    std::cin >> url;
+
+    if (
+        url != "" and
+        url.find(';') == std::string::npos and
+        url.find('&') == std::string::npos)
+    {
+        std::stringstream remote_add_cmd;
+
+        remote_add_cmd << "git remote add origin " << url;
+
+        system(remote_add_cmd.str().c_str());
+        system("git push --set-upstream origin main");
+    }
+
+    open_cmd << "code " << project_name << "\n";
+    system(open_cmd.str().c_str());
 }
 
 auto Program::create_folders(
