@@ -159,10 +159,9 @@ auto Program::post_setup(
     system(git_add_cmd.str().c_str());
     system(git_commit_cmd.str().c_str());
 
-    std::cout << "url of the remote repo...\n"
-              << "(if you only want a local repo, "
-              << "just leave it blank and hit enter)\n\n"
-              << "URL: ";
+    std::cout
+        << "NOTE: Leave blank for local only.\n\n"
+        << "URL: ";
 
     std::string url = "";
     url.reserve(40);
