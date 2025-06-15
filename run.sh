@@ -1,1 +1,2 @@
-clear && python3 run.py
+clear
+python3 run.py
