@@ -157,17 +157,17 @@ auto Program::post_setup(
 
     if (system(git_init_cmd.str().c_str()))
     {
-        std::cerr << "\nerror initializing repository.\n";
+        std::cerr << "\nC++: git: ERROR: error initializing repository.\n";
     }
 
     if (system(git_add_cmd.str().c_str()))
     {
-        std::cerr << "\nerror adding files to git repository.\n";
+        std::cerr << "\nC++: git: error adding files to git repository.\n";
     }
 
     if (system(git_commit_cmd.str().c_str()))
     {
-        std::cerr << "\nerror making initial commit.\n";
+        std::cerr << "\nC++: git: error making initial commit.\n";
     }
 
     std::cout
