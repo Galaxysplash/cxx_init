@@ -1,7 +1,0 @@
-[
-{
-  "directory": "/home/marcel/Dokumente/code_projects/cci/tmp_test_project/build",
-  "command": "/usr/bin/g++-11   -g -std=gnu++20 -o CMakeFiles/tmp_test_project.dir/src/main.cpp.o -c /home/marcel/Dokumente/code_projects/cci/tmp_test_project/src/main.cpp",
-  "file": "/home/marcel/Dokumente/code_projects/cci/tmp_test_project/src/main.cpp"
-}
-]

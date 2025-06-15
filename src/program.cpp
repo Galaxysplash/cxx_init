@@ -161,7 +161,8 @@ auto Program::post_setup(
 
     std::cout << "url of the remote repo...\n"
               << "(if you only want a local repo, "
-              << "just leave it blank and hit enter)\n\nYou: ";
+              << "just leave it blank and hit enter)\n\n"
+              << "URL: ";
 
     std::string url = "";
     url.reserve(40);
