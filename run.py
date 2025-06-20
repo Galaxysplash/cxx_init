@@ -1,38 +1,70 @@
 import os
 import platform
-import subprocess
+from subprocess import run, PIPE
 
-project_name: str = "cci"
+# how your executable should be named
+project_name: str = "example"
 
-if platform.system() == "Windows":
-    subprocess.run("rmdir /S /Q build", shell = True)
+# arguments you wonna use for testing
+testing_arguments = "tmp_test_project"
+
+
+# build code (don't touch it, unless you know what your doing)
+windows: bool = platform.system() == "Windows"
+
+if windows:
+	run("rmdir /S /Q build", shell = True)
 else:
-    subprocess.run("rm -rf build", shell = True)
+	run("rm -rf build", shell = True)
 
 if not os.path.exists("build"):
-    subprocess.run("mkdir build", shell=True)
+	run("mkdir build", shell=True)
 
-result = subprocess.run(
-    "conan install . --build=missing -of build && cmake . -B build && make -C build",
-    check=True,
-    shell=True,
-    stdout=subprocess.PIPE,
-    stderr=subprocess.PIPE
-)
+def execute_cmd(cmd: str, description: str):
+	conan_result = run(
+		cmd,
+		shell=True,
+		stdout=PIPE,
+		stderr=PIPE
+	)
 
-if result.stdout:
-    print(result.stdout.decode())
+	if conan_result.returncode == 0:
+		print(description + " was successful!!!\n\n\n")
+	else:
+		print("---DETAIL ZONE---")
+		if conan_result.stdout:
+			print(conan_result.stdout)
+		if conan_result.stderr:
+			print(conan_result.stderr)
+		print("---END DETAIL ZONE---")
+		
+		print("\n\n\n" + description + " has failed! (details are above)")
+		exit(1)
 
-if result.stderr:
-    print(result.stderr.decode())
 
 
-if platform.system() == "Windows":
-    if os.path.exists(f".\\build\\{project_name}"):
-        subprocess.run([f".\\build\\{project_name}.exe"], check = True)
+cmds = [
+			(
+				"conan install . --build=missing -of build",
+				"Conan installing packages required by your conanfile.txt"
+			),
+			(
+				"cmake . -B build",
+				"CMake pre generating the stuff necessary for building your project"
+			),
+			(
+				"make -C build",
+				"Make trying to build your project form the cmake generated stuff"
+			)
+		]
 
+for cmd in cmds:
+	execute_cmd(cmd[0], cmd[1])
+
+if windows:
+	if os.path.exists(f".\\build\\{project_name}_exec.exe"):
+		run([f".\\build\\{project_name}_exec.exe {testing_arguments}"], shell=True, check = True)
 else:
-    if os.path.exists(f"./build/{project_name}"):
-        subprocess.run([f"./build/{project_name}.exe"], check = True)
-
-
+	if os.path.exists(f"./build/{project_name}_exec"):
+		run([f"./build/{project_name}_exec {testing_arguments}"], shell=True, check = True)
+# end building code

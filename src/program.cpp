@@ -1,5 +1,7 @@
 #include "program.hpp"
 #include "file.hpp"
+#include "conanfile_txt.h"
+#include "dot_gitignore.h"
 
 #include <iostream>
 
@@ -26,14 +28,14 @@ auto Program::setup(
     const std::stringstream &src_directory = Helpers::get_src_directory(project_directory);
 
     const std::initializer_list<std::string> folder_names = {
-        "build", "src"};
+        "build", "src", "testing", "include"};
 
     std::stringstream
         cmakelists_content,
         python_run_file_content,
         readme_file_content,
         dot_gitignore_content,
-        conan_file_txt_content;
+        conanfile_txt_content;
 
     std::stringstream
         main_cpp_content;
@@ -46,83 +48,22 @@ auto Program::setup(
         << "\treturn 0;\n"
         << "}";
 
-    cmakelists_content
-        << "cmake_minimum_required(VERSION 3.20)\n"
-        << "project(" << project_name << ")\n"
-        << "\n"
-        << "set(CMAKE_CXX_STANDARD 20)\n"
-        << "set(CMAKE_CXX_STANDARD_REQUIRED ON)\n"
-        << "\n"
-        << "file(GLOB_RECURSE SOURCES src/*.cpp)\n"
-        << "add_executable(${PROJECT_NAME} ${SOURCES})\n";
-
-    python_run_file_content
-        << "import os\n"
-        << "import platform\n"
-        << "import subprocess\n\n"
-
-        << "project_name: str = \"" << project_name << "\"\n\n"
-
-        << "if platform.system() == \"Windows\":\n"
-        << "\tsubprocess.run(\"rmdir /S /Q build\", shell = True)\n"
-        << "else:\n"
-        << "\tsubprocess.run(\"rm -rf build\", shell = True)\n\n"
-
-        << "if not os.path.exists(\"build\"):\n"
-        << "\tsubprocess.run(\"mkdir build\", shell=True)\n\n"
-
-        << "result = subprocess.run(\n"
-        << "\tf\"conan install . --build=missing -of build "
-        << "&& cmake . -B build && make -C build\""
-        << ",\n\tcheck=True,"
-        << "\n\tshell=True,\n"
-        << "\tstdout=subprocess.PIPE,\n"
-        << "\tstderr=subprocess.PIPE\n)\n\n"
-
-        << "if result.stdout:\n"
-        << "\tprint(result.stdout.decode())\n"
-        << "if result.stderr:\n"
-        << "\tprint(result.stderr.decode())\n\n"
-
-        << "if platform.system() == \"Windows\":\n"
-        << "\tif os.path.exists(f\".\\\\build\\\\{project_name}\"):\n"
-        << "\t\tsubprocess.run([f\".\\\\build\\\\{project_name}.exe\"], check = True)\n"
-        << "else:\n"
-        << "\tif os.path.exists(f\"./build/{project_name}\"):\n"
-        << "\t\tsubprocess.run([f\"./build/{project_name}\"], check = True)\n";
+    cmakelists_content << "import os\nimport platform\nfrom subprocess import run, PIPE\n\n# how your executable should be named\nproject_name: str = \"" << project_name << "\"\n\n# arguments you wonna use for testing\ntesting_arguments = \"\"\n\n\n# build code (don't touch it, unless you know what your doing)\nwindows: bool = platform.system() == \"Windows\"\n\nif windows:\n\trun(\"rmdir /S /Q build\", shell = True)\nelse:\n\trun(\"rm -rf build\", shell = True)\n\nif not os.path.exists(\"build\"):\n\trun(\"mkdir build\", shell=True)\n\ndef execute_cmd(cmd: str, description: str):\n\tconan_result = run(\n\t\tcmd,\n\t\tshell=True,\n\t\tstdout=PIPE,\n\t\tstderr=PIPE\n\t)\n\n\tif conan_result.returncode == 0:\n\t\tprint(description + \" was successful!!!\\n\\n\\n\")\n\telse:\n\t\tprint(\"---DETAIL ZONE---\")\n\t\tif conan_result.stdout:\n\t\t\tprint(conan_result.stdout)\n\t\tif conan_result.stderr:\n\t\t\tprint(conan_result.stderr)\n\t\tprint(\"---END DETAIL ZONE---\")\n\t\t\n\t\tprint(\"\\n\\n\\n\" + description + \" has failed! (details are above)\")\n\t\texit(1)\n\n\n\ncmds = [\n\t\t\t(\n\t\t\t\t\"conan install . --build=missing -of build\",\n\t\t\t\t\"Conan installing packages required by your conanfile.txt\"\n\t\t\t),\n\t\t\t(\n\t\t\t\t\"cmake . -B build\",\n\t\t\t\t\"CMake pre generating the stuff necessary for building your project\"\n\t\t\t),\n\t\t\t(\n\t\t\t\t\"make -C build\",\n\t\t\t\t\"Make trying to build your project form the cmake generated stuff\"\n\t\t\t)\n\t\t]\n\nfor cmd in cmds:\n\texecute_cmd(cmd[0], cmd[1])\n\nif windows:\n\tif os.path.exists(f\".\\\\build\\\\{project_name}_exec.exe\"):\n\t\trun([f\".\\\\build\\\\{project_name}_exec.exe {testing_arguments}\"], shell=True, check = True)\nelse:\n\tif os.path.exists(f\"./build/{project_name}_exec\"):\n\t\trun([f\"./build/{project_name}_exec {testing_arguments}\"], shell=True, check = True)\n# end building code";
 
     readme_file_content
-        << "# " << project_name
-        << "\n\n"
-        << "## prerequisites\n"
-        << "->python3<br>\n"
-        << "->git<br>\n"
-        << "->make<br>\n"
-        << "->cmake 3.20 or higher\n\n"
-        << "## build & run\n"
-        << "-> On Windows: 'python run.py'<br>\n"
-        << "-> On unix-like systems like (macOS, Linux, freeBSD, ...): "
-        << "'python3 run.py'<br>\n";
+        << "# " << project_name << "\n\n## prerequisites\n->python3<br>\n->git<br>\n->make<br>\n->conan\n->cmake 3.20 or higher\n->vscode\n\n## build & run\n-> On Windows: 'python run.py'<br>\n-> On unix-like systems like (macOS, Linux, ...):'python3 run.py'<br>\n";
 
     dot_gitignore_content
-        << "build\n"
-        << ".vscode\n";
+        << dot_gitignore;
 
-    conan_file_txt_content
-        << "# uncomment for external dependencies\n"
-        << "# [requires]\n\n\n"
-        << "[generators]\n"
-        << "CMakeDeps\n"
-        << "CMakeToolchain\n\n"
-        << "[layout]\n"
-        << "cmake_layout\n";
+    conanfile_txt_content << conanfile_txt;
 
     File global_files[] = {
         {"CMakeLists.txt", cmakelists_content.str()},
         {"run.py", python_run_file_content.str()},
         {".gitignore", dot_gitignore_content.str()},
         {"README.md", readme_file_content.str()},
-        {"conanfile.txt", conan_file_txt_content.str()}};
+        {"conanfile.txt", conanfile_txt_content.str()}};
 
     File src_file =
         {"main.cpp", main_cpp_content.str()};
@@ -167,23 +108,23 @@ auto Program::post_setup(
         git_add_cmd,
         git_commit_cmd;
 
-    git_init_cmd << "git -C " << project_directory.str() << " init  --initial-branch=main";
-    git_add_cmd << "git -C " << project_directory.str() << " add .";
-    git_commit_cmd << "git -C " << project_directory.str() << " commit -a -m \"init\"";
+    git_init_cmd << "git -C \"" << project_directory.str() << "\" init  --initial-branch=main";
+    git_add_cmd << "git -C \"" << project_directory.str() << "\" add .";
+    git_commit_cmd << "git -C \"" << project_directory.str() << "\" commit -a -m \"init\"";
 
     if (system(git_init_cmd.str().c_str()))
     {
-        std::cerr << "\nC++: git: ERROR: error initializing repository.\n";
+        std::cerr << "\nError initializing git repository.\n";
     }
 
     if (system(git_add_cmd.str().c_str()))
     {
-        std::cerr << "\nC++: git: error adding files to git repository.\n";
+        std::cerr << "\nError adding files to git repository.\n";
     }
 
     if (system(git_commit_cmd.str().c_str()))
     {
-        std::cerr << "\nC++: git: error making initial commit.\n";
+        std::cerr << "\nError making initial commit.\n";
     }
 
     std::cout
@@ -196,10 +137,7 @@ auto Program::post_setup(
 
     std::cout << "\n";
 
-    if (
-        url != "" and
-        url.find(';') == std::string::npos and
-        url.find('&') == std::string::npos)
+    if (not url.empty() and url.find(';') == 0 and url.find('&') == 0)
     {
         std::stringstream
             remote_add_cmd,
@@ -210,12 +148,12 @@ auto Program::post_setup(
 
         if (system(remote_add_cmd.str().c_str()))
         {
-            std::cerr << "\nC++: git: error adding remote repository.\n";
+            std::cerr << "\nError adding remote repository.\n";
         }
 
         if (system(git_push_cmd.str().c_str()))
         {
-            std::cerr << "\nC++: git: error pushing to remote repository.\n";
+            std::cerr << "\nError pushing to remote repository.\n";
         }
     }
 
