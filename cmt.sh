@@ -1,4 +1,5 @@
 clear
+./gen.sh
 ./refresh
 rm -rf build
 git add -f *
