@@ -14,7 +14,7 @@ auto Program::execute(
     const std::stringstream &project_directory = Helpers::get_project_directory(project_name);
 
     pre_setup(project_directory);
-    // setup(project_name, project_directory);
+    setup(project_name, project_directory);
     // post_setup(project_name, project_directory);
 }
 
