@@ -54,20 +54,20 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/marcel/Documents/code_projects/cci/test
+CMAKE_SOURCE_DIR = /Users/marcel/Documents/code_projects/cci/tmp_test_project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/marcel/Documents/code_projects/cci/test/build
+CMAKE_BINARY_DIR = /Users/marcel/Documents/code_projects/cci/tmp_test_project/build
 
 #=============================================================================
 # Directory level rules for the build root directory
 
 # The main recursive "all" target.
-all: CMakeFiles/testnit.dir/all
+all: CMakeFiles/tmp_test_project_exec.dir/all
 .PHONY : all
 
 # The main recursive "codegen" target.
-codegen: CMakeFiles/testnit.dir/codegen
+codegen: CMakeFiles/tmp_test_project_exec.dir/codegen
 .PHONY : codegen
 
 # The main recursive "preinstall" target.
@@ -75,40 +75,40 @@ preinstall:
 .PHONY : preinstall
 
 # The main recursive "clean" target.
-clean: CMakeFiles/testnit.dir/clean
+clean: CMakeFiles/tmp_test_project_exec.dir/clean
 .PHONY : clean
 
 #=============================================================================
-# Target rules for target CMakeFiles/testnit.dir
+# Target rules for target CMakeFiles/tmp_test_project_exec.dir
 
 # All Build rule for target.
-CMakeFiles/testnit.dir/all:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testnit.dir/build.make CMakeFiles/testnit.dir/depend
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testnit.dir/build.make CMakeFiles/testnit.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/marcel/Documents/code_projects/cci/test/build/CMakeFiles --progress-num=1,2 "Built target testnit"
-.PHONY : CMakeFiles/testnit.dir/all
+CMakeFiles/tmp_test_project_exec.dir/all:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tmp_test_project_exec.dir/build.make CMakeFiles/tmp_test_project_exec.dir/depend
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tmp_test_project_exec.dir/build.make CMakeFiles/tmp_test_project_exec.dir/build
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/marcel/Documents/code_projects/cci/tmp_test_project/build/CMakeFiles --progress-num=1,2 "Built target tmp_test_project_exec"
+.PHONY : CMakeFiles/tmp_test_project_exec.dir/all
 
 # Build rule for subdir invocation for target.
-CMakeFiles/testnit.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/marcel/Documents/code_projects/cci/test/build/CMakeFiles 2
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/testnit.dir/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/marcel/Documents/code_projects/cci/test/build/CMakeFiles 0
-.PHONY : CMakeFiles/testnit.dir/rule
+CMakeFiles/tmp_test_project_exec.dir/rule: cmake_check_build_system
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/marcel/Documents/code_projects/cci/tmp_test_project/build/CMakeFiles 2
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 CMakeFiles/tmp_test_project_exec.dir/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/marcel/Documents/code_projects/cci/tmp_test_project/build/CMakeFiles 0
+.PHONY : CMakeFiles/tmp_test_project_exec.dir/rule
 
 # Convenience name for target.
-testnit: CMakeFiles/testnit.dir/rule
-.PHONY : testnit
+tmp_test_project_exec: CMakeFiles/tmp_test_project_exec.dir/rule
+.PHONY : tmp_test_project_exec
 
 # codegen rule for target.
-CMakeFiles/testnit.dir/codegen:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testnit.dir/build.make CMakeFiles/testnit.dir/codegen
-	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/marcel/Documents/code_projects/cci/test/build/CMakeFiles --progress-num=1,2 "Finished codegen for target testnit"
-.PHONY : CMakeFiles/testnit.dir/codegen
+CMakeFiles/tmp_test_project_exec.dir/codegen:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tmp_test_project_exec.dir/build.make CMakeFiles/tmp_test_project_exec.dir/codegen
+	@$(CMAKE_COMMAND) -E cmake_echo_color "--switch=$(COLOR)" --progress-dir=/Users/marcel/Documents/code_projects/cci/tmp_test_project/build/CMakeFiles --progress-num=1,2 "Finished codegen for target tmp_test_project_exec"
+.PHONY : CMakeFiles/tmp_test_project_exec.dir/codegen
 
 # clean rule for target.
-CMakeFiles/testnit.dir/clean:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testnit.dir/build.make CMakeFiles/testnit.dir/clean
-.PHONY : CMakeFiles/testnit.dir/clean
+CMakeFiles/tmp_test_project_exec.dir/clean:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tmp_test_project_exec.dir/build.make CMakeFiles/tmp_test_project_exec.dir/clean
+.PHONY : CMakeFiles/tmp_test_project_exec.dir/clean
 
 #=============================================================================
 # Special targets to cleanup operation of make.

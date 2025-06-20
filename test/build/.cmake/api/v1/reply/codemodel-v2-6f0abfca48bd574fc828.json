@@ -38,9 +38,9 @@
 			[
 				{
 					"directoryIndex" : 0,
-					"id" : "test_exec::@6890427a1f51a3e7e1df",
-					"jsonFile" : "target-test_exec-Debug-fa52810a25e849d26118.json",
-					"name" : "test_exec",
+					"id" : "testnit::@6890427a1f51a3e7e1df",
+					"jsonFile" : "target-testnit-Debug-de333f03e5766c8b4af9.json",
+					"name" : "testnit",
 					"projectIndex" : 0
 				}
 			]

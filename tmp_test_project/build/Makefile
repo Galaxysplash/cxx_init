@@ -57,10 +57,10 @@ RM = /opt/homebrew/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /Users/marcel/Documents/code_projects/cci/test
+CMAKE_SOURCE_DIR = /Users/marcel/Documents/code_projects/cci/tmp_test_project
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /Users/marcel/Documents/code_projects/cci/test/build
+CMAKE_BINARY_DIR = /Users/marcel/Documents/code_projects/cci/tmp_test_project/build
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -87,9 +87,9 @@ rebuild_cache/fast: rebuild_cache
 
 # The main all target
 all: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/marcel/Documents/code_projects/cci/test/build/CMakeFiles /Users/marcel/Documents/code_projects/cci/test/build//CMakeFiles/progress.marks
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/marcel/Documents/code_projects/cci/tmp_test_project/build/CMakeFiles /Users/marcel/Documents/code_projects/cci/tmp_test_project/build//CMakeFiles/progress.marks
 	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 all
-	$(CMAKE_COMMAND) -E cmake_progress_start /Users/marcel/Documents/code_projects/cci/test/build/CMakeFiles 0
+	$(CMAKE_COMMAND) -E cmake_progress_start /Users/marcel/Documents/code_projects/cci/tmp_test_project/build/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
@@ -117,24 +117,24 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named testnit
+# Target rules for targets named tmp_test_project_exec
 
 # Build rule for target.
-testnit: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 testnit
-.PHONY : testnit
+tmp_test_project_exec: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 tmp_test_project_exec
+.PHONY : tmp_test_project_exec
 
 # fast build rule for target.
-testnit/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testnit.dir/build.make CMakeFiles/testnit.dir/build
-.PHONY : testnit/fast
+tmp_test_project_exec/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tmp_test_project_exec.dir/build.make CMakeFiles/tmp_test_project_exec.dir/build
+.PHONY : tmp_test_project_exec/fast
 
 src/main.o: src/main.cpp.o
 .PHONY : src/main.o
 
 # target to build an object file
 src/main.cpp.o:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testnit.dir/build.make CMakeFiles/testnit.dir/src/main.cpp.o
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tmp_test_project_exec.dir/build.make CMakeFiles/tmp_test_project_exec.dir/src/main.cpp.o
 .PHONY : src/main.cpp.o
 
 src/main.i: src/main.cpp.i
@@ -142,7 +142,7 @@ src/main.i: src/main.cpp.i
 
 # target to preprocess a source file
 src/main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testnit.dir/build.make CMakeFiles/testnit.dir/src/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tmp_test_project_exec.dir/build.make CMakeFiles/tmp_test_project_exec.dir/src/main.cpp.i
 .PHONY : src/main.cpp.i
 
 src/main.s: src/main.cpp.s
@@ -150,7 +150,7 @@ src/main.s: src/main.cpp.s
 
 # target to generate assembly for a file
 src/main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles/testnit.dir/build.make CMakeFiles/testnit.dir/src/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/tmp_test_project_exec.dir/build.make CMakeFiles/tmp_test_project_exec.dir/src/main.cpp.s
 .PHONY : src/main.cpp.s
 
 # Help Target
@@ -161,7 +161,7 @@ help:
 	@echo "... depend"
 	@echo "... edit_cache"
 	@echo "... rebuild_cache"
-	@echo "... testnit"
+	@echo "... tmp_test_project_exec"
 	@echo "... src/main.o"
 	@echo "... src/main.i"
 	@echo "... src/main.s"

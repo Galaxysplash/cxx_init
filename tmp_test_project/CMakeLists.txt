@@ -1,5 +1,5 @@
 cmake_minimum_required(VERSION 3.20)
-project(test)
+project(tmp_test_project)
 
 set(CMAKE_CXX_STANDARD 23)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
@@ -7,4 +7,4 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 include_directories(include)
 
 file(GLOB_RECURSE SOURCES src/*.cpp)
-add_executable(${PROJECT_NAME}nit ${SOURCES})
+add_executable(${PROJECT_NAME}_exec ${SOURCES})

@@ -2,7 +2,7 @@
 	"artifacts" : 
 	[
 		{
-			"path" : "test_exec"
+			"path" : "tmp_test_project_exec"
 		}
 	],
 	"backtrace" : 1,
@@ -49,7 +49,7 @@
 			[
 				{
 					"backtrace" : 2,
-					"path" : "/Users/marcel/Documents/code_projects/cci/test/include"
+					"path" : "/Users/marcel/Documents/code_projects/cci/tmp_test_project/include"
 				}
 			],
 			"language" : "CXX",
@@ -67,7 +67,7 @@
 			]
 		}
 	],
-	"id" : "test_exec::@6890427a1f51a3e7e1df",
+	"id" : "tmp_test_project_exec::@6890427a1f51a3e7e1df",
 	"link" : 
 	{
 		"commandFragments" : 
@@ -79,8 +79,8 @@
 		],
 		"language" : "CXX"
 	},
-	"name" : "test_exec",
-	"nameOnDisk" : "test_exec",
+	"name" : "tmp_test_project_exec",
+	"nameOnDisk" : "tmp_test_project_exec",
 	"paths" : 
 	{
 		"build" : ".",
