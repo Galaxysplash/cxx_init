@@ -9,5 +9,5 @@
 ->vscode
 
 ## build & run
--> On Windows: 'python run.py'<br>
--> On unix-like systems like (macOS, Linux, ...):'python3 run.py'<br>
+-> On Windows: 'python build.py'<br>
+-> On unix-like systems like (macOS, Linux, ...):'python3 build.py'<br>
