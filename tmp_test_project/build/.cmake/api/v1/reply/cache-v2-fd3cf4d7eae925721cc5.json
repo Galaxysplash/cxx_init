@@ -55,7 +55,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/marcel/Documents/code_projects/cci/test/build"
+			"value" : "/Users/marcel/Documents/code_projects/cci/tmp_test_project/build"
 		},
 		{
 			"name" : "CMAKE_CACHE_MAJOR_VERSION",
@@ -491,7 +491,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/marcel/Documents/code_projects/cci/test/build/CMakeFiles/pkgRedirects"
+			"value" : "/Users/marcel/Documents/code_projects/cci/tmp_test_project/build/CMakeFiles/pkgRedirects"
 		},
 		{
 			"name" : "CMAKE_GENERATOR",
@@ -551,7 +551,7 @@
 				}
 			],
 			"type" : "INTERNAL",
-			"value" : "/Users/marcel/Documents/code_projects/cci/test"
+			"value" : "/Users/marcel/Documents/code_projects/cci/tmp_test_project"
 		},
 		{
 			"name" : "CMAKE_INSTALL_NAME_TOOL",
@@ -847,7 +847,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "test"
+			"value" : "tmp_test_project"
 		},
 		{
 			"name" : "CMAKE_RANLIB",
@@ -1146,7 +1146,7 @@
 			"value" : "FALSE"
 		},
 		{
-			"name" : "test_BINARY_DIR",
+			"name" : "tmp_test_project_BINARY_DIR",
 			"properties" : 
 			[
 				{
@@ -1155,10 +1155,10 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/marcel/Documents/code_projects/cci/test/build"
+			"value" : "/Users/marcel/Documents/code_projects/cci/tmp_test_project/build"
 		},
 		{
-			"name" : "test_IS_TOP_LEVEL",
+			"name" : "tmp_test_project_IS_TOP_LEVEL",
 			"properties" : 
 			[
 				{
@@ -1170,7 +1170,7 @@
 			"value" : "ON"
 		},
 		{
-			"name" : "test_SOURCE_DIR",
+			"name" : "tmp_test_project_SOURCE_DIR",
 			"properties" : 
 			[
 				{
@@ -1179,7 +1179,7 @@
 				}
 			],
 			"type" : "STATIC",
-			"value" : "/Users/marcel/Documents/code_projects/cci/test"
+			"value" : "/Users/marcel/Documents/code_projects/cci/tmp_test_project"
 		}
 	],
 	"kind" : "cache",

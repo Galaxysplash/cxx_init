@@ -210,8 +210,8 @@
 	"kind" : "cmakeFiles",
 	"paths" : 
 	{
-		"build" : "/Users/marcel/Documents/code_projects/cci/tmp_test_project/build",
-		"source" : "/Users/marcel/Documents/code_projects/cci/tmp_test_project"
+		"build" : "/Users/marcel/Documents/code_projects/cci/test/build",
+		"source" : "/Users/marcel/Documents/code_projects/cci/test"
 	},
 	"version" : 
 	{
