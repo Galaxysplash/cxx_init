@@ -15,7 +15,7 @@ auto Program::execute(
 
     pre_setup(project_directory);
     setup(project_name, project_directory);
-    // post_setup(project_name, project_directory);
+    post_setup(project_name, project_directory);
 }
 
 auto Program::pre_setup(
