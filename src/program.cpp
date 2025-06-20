@@ -105,61 +105,61 @@ auto Program::post_setup(
         << "run.py\n";
 
     system(first_run_cmd.str().c_str());
-
-    std::stringstream
-        git_init_cmd,
-        git_add_cmd,
-        git_commit_cmd;
-
-    git_init_cmd << "git -C \"" << project_directory.str() << "\" init  --initial-branch=main";
-    git_add_cmd << "git -C \"" << project_directory.str() << "\" add .";
-    git_commit_cmd << "git -C \"" << project_directory.str() << "\" commit -a -m \"init\"";
-
-    if (system(git_init_cmd.str().c_str()))
-    {
-        std::cerr << "\nError initializing git repository.\n";
-    }
-
-    if (system(git_add_cmd.str().c_str()))
-    {
-        std::cerr << "\nError adding files to git repository.\n";
-    }
-
-    if (system(git_commit_cmd.str().c_str()))
-    {
-        std::cerr << "\nError making initial commit.\n";
-    }
-
-    std::cout
-        << "\nNOTE: Leave blank for LOCAL repository ONLY.\n"
-        << "URL for REMOTE repository: ";
-
-    std::string url = "";
-    url.reserve(40);
-    std::cin >> url;
-
-    std::cout << "\n";
-
-    if (not url.empty() and url.find(';') == 0 and url.find('&') == 0)
-    {
+    /*
         std::stringstream
-            remote_add_cmd,
-            git_push_cmd;
+            git_init_cmd,
+            git_add_cmd,
+            git_commit_cmd;
 
-        remote_add_cmd << "git -C " << project_directory.str() << " remote add origin " << url;
-        git_push_cmd << "git -C " << project_directory.str() << " push -u origin main";
+        git_init_cmd << "git -C \"" << project_directory.str() << "\" init  --initial-branch=main";
+        git_add_cmd << "git -C \"" << project_directory.str() << "\" add .";
+        git_commit_cmd << "git -C \"" << project_directory.str() << "\" commit -a -m \"init\"";
 
-        if (system(remote_add_cmd.str().c_str()))
+        if (system(git_init_cmd.str().c_str()))
         {
-            std::cerr << "\nError adding remote repository.\n";
+            std::cerr << "\nError initializing git repository.\n";
         }
 
-        if (system(git_push_cmd.str().c_str()))
+        if (system(git_add_cmd.str().c_str()))
         {
-            std::cerr << "\nError pushing to remote repository.\n";
+            std::cerr << "\nError adding files to git repository.\n";
         }
-    }
 
+        if (system(git_commit_cmd.str().c_str()))
+        {
+            std::cerr << "\nError making initial commit.\n";
+        }
+
+        std::cout
+            << "\nNOTE: Leave blank for LOCAL repository ONLY.\n"
+            << "URL for REMOTE repository: ";
+
+        std::string url = "";
+        url.reserve(40);
+        std::cin >> url;
+
+        std::cout << "\n";
+
+        if (not url.empty() and url.find(';') == 0 and url.find('&') == 0)
+        {
+            std::stringstream
+                remote_add_cmd,
+                git_push_cmd;
+
+            remote_add_cmd << "git -C " << project_directory.str() << " remote add origin " << url;
+            git_push_cmd << "git -C " << project_directory.str() << " push -u origin main";
+
+            if (system(remote_add_cmd.str().c_str()))
+            {
+                std::cerr << "\nError adding remote repository.\n";
+            }
+
+            if (system(git_push_cmd.str().c_str()))
+            {
+                std::cerr << "\nError pushing to remote repository.\n";
+            }
+        }
+    */
     std::cout << "\n";
 
     open_cmd << "code " << project_name << "\n";
