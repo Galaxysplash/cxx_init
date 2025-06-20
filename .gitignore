@@ -2,4 +2,5 @@
 build
 testing
 out
+cci
 tmp_test_project
