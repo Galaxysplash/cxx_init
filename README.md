@@ -5,9 +5,11 @@ a small free and open source tool made for speeding up the process of creating a
 ->python3<br>
 ->git<br>
 ->make<br>
-->conan
-->cmake 3.20 or higher
-->vscode
+->conan<br>
+->cmake 3.20 or higher<br>
+->vscode<br>
+# this only for building
+->str2file (https://github.com/Galaxysplash/file2str.git)<br>
 
 ## build & build
 -> On Windows: 'python build.py'<br>
