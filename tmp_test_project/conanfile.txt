@@ -1,6 +1,6 @@
 # uncomment for external dependencies
 # [requires]
-# dependencies
+# dependency
 
 [generators]
 CMakeDeps
