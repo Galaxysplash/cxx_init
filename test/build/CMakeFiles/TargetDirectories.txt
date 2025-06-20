@@ -1,0 +1,3 @@
+/Users/marcel/Documents/code_projects/cci/test/build/CMakeFiles/test_exec.dir
+/Users/marcel/Documents/code_projects/cci/test/build/CMakeFiles/edit_cache.dir
+/Users/marcel/Documents/code_projects/cci/test/build/CMakeFiles/rebuild_cache.dir

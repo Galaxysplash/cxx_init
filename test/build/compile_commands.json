@@ -1,0 +1,8 @@
+[
+{
+  "directory": "/Users/marcel/Documents/code_projects/cci/test/build",
+  "command": "/usr/bin/clang++  -I/Users/marcel/Documents/code_projects/cci/test/include -g -std=gnu++2b -arch arm64 -o CMakeFiles/test_exec.dir/src/main.cpp.o -c /Users/marcel/Documents/code_projects/cci/test/src/main.cpp",
+  "file": "/Users/marcel/Documents/code_projects/cci/test/src/main.cpp",
+  "output": "CMakeFiles/test_exec.dir/src/main.cpp.o"
+}
+]

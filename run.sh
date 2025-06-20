@@ -1,2 +1,2 @@
 clear
-python3 run.py
+python3 build.py
