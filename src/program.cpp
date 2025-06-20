@@ -14,8 +14,8 @@ auto Program::execute(
     const std::stringstream &project_directory = Helpers::get_project_directory(project_name);
 
     pre_setup(project_directory);
-    setup(project_name, project_directory);
-    post_setup(project_name, project_directory);
+    // setup(project_name, project_directory);
+    // post_setup(project_name, project_directory);
 }
 
 auto Program::pre_setup(
@@ -31,7 +31,7 @@ auto Program::setup(
     const std::stringstream &src_directory = Helpers::get_src_directory(project_directory);
 
     const std::initializer_list<std::string> folder_names = {
-        "src", "testing", "include"};
+        "build", "src", "testing", "include"};
 
     std::stringstream
         cmakelists_content,
