@@ -1,4 +1,5 @@
 .vscode
 build
 testing
+out
 tmp_test_project
