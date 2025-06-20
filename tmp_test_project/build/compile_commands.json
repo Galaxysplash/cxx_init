@@ -1,8 +1,0 @@
-[
-{
-  "directory": "/Users/marcel/Documents/code_projects/cci/tmp_test_project/build",
-  "command": "/usr/bin/clang++  -I/Users/marcel/Documents/code_projects/cci/tmp_test_project/include -g -std=gnu++2b -arch arm64 -o CMakeFiles/tmp_test_projectnit.dir/src/main.cpp.o -c /Users/marcel/Documents/code_projects/cci/tmp_test_project/src/main.cpp",
-  "file": "/Users/marcel/Documents/code_projects/cci/tmp_test_project/src/main.cpp",
-  "output": "CMakeFiles/tmp_test_projectnit.dir/src/main.cpp.o"
-}
-]

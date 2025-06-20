@@ -1,3 +1,0 @@
-/Users/marcel/Documents/code_projects/cci/tmp_test_project/build/CMakeFiles/tmp_test_projectnit.dir
-/Users/marcel/Documents/code_projects/cci/tmp_test_project/build/CMakeFiles/edit_cache.dir
-/Users/marcel/Documents/code_projects/cci/tmp_test_project/build/CMakeFiles/rebuild_cache.dir
