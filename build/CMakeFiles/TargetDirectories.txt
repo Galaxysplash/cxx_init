@@ -1,3 +1,0 @@
-/Users/marcel/Documents/code_projects/cci/build/CMakeFiles/cci_exec.dir
-/Users/marcel/Documents/code_projects/cci/build/CMakeFiles/edit_cache.dir
-/Users/marcel/Documents/code_projects/cci/build/CMakeFiles/rebuild_cache.dir

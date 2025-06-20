@@ -1,1 +1,0 @@
-. "/Users/marcel/Documents/code_projects/cci/build/deactivate_conanrunenv-release-armv8.sh"
