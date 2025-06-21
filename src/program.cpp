@@ -3,10 +3,6 @@
 
 #include <iostream>
 
-// generated headers
-#include <conanfile_txt.h>
-// end generated headers
-
 auto Program::execute(
     const std::string &project_name) -> void
 {
@@ -59,7 +55,7 @@ auto Program::setup(
             << "vscode\nbuild\n";
 
         conanfile_txt_content
-            << conanfile_txt;
+            << "# uncomment add in libraries form https://www.conan.io\n# [requires]\n# dependency 1\n# dependency 2\n# ...\n\n[generators]\nCMakeDeps\nCMakeToolchain";
     }
     File global_files[] = {
         {"CMakeLists.txt", cmakelists_content.str()},
@@ -89,6 +85,7 @@ auto Program::post_setup(
 
     open_cmd << "code " << project_name << "\n";
     system(open_cmd.str().c_str());
+    system("exit");
 }
 
 auto Program::create_folders(
