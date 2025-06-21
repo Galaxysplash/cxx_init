@@ -1,0 +1,9 @@
+# uncomment add in libraries form https://www.conan.io
+# [requires]
+# dependency 1
+# dependency 2
+# ...
+
+[generators]
+CMakeDeps
+CMakeToolchain

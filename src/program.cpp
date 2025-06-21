@@ -55,7 +55,7 @@ auto Program::setup(
             << "vscode\nbuild\n";
 
         conanfile_txt_content
-            << "# uncomment add in libraries form https://www.conan.io\n# [requires]\n# dependency 1\n# dependency 2\n# ...\n\n[generators]\nCMakeDeps\nCMakeToolchain";
+            << "# uncomment add in libraries form https://www.conan.io\n# [requires]\n# dependency 1\n# dependency 2\n# ...\n\n[generators]\nCMakeDeps\nCMakeToolchain\n\n[layout]\ncmake_layout ";
     }
     File global_files[] = {
         {"CMakeLists.txt", cmakelists_content.str()},
