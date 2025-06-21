@@ -11,6 +11,6 @@ a small free and open source tool made for speeding up the process of creating a
 # this only for building
 ->str2file (https://github.com/Galaxysplash/file2str.git)<br>
 
-## build & build
+## build & run
 -> On Windows: 'python build.py'<br>
 -> On unix-like systems like (macOS, Linux, ...):'python3 build.py'<br>
