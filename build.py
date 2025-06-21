@@ -45,10 +45,6 @@ def execute_cmd(cmd: str, description: str):
 
 cmds = [
 			(
-				"conan install . --build=missing -of build",
-				"Conan installing packages required by your conanfile.txt"
-			),
-			(
 				"cmake . -B build",
 				"CMake pre generating the stuff necessary for building your project"
 			),
