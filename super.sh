@@ -1,4 +1,4 @@
 clear
-./refresh
-./install.sh
-./test.sh
+sudo bash refresh
+sudo bash install.sh
+sudo bash test.sh
